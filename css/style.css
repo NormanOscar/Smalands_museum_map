@@ -66,7 +66,6 @@ i {
     border-radius: 0.5em;
     font-size: medium;
     background-color: rgb(220, 220, 220);
-    box-shadow: 3px 3px 10px rgb(219, 219, 219);
 }
 #flrBtns {
     grid-area: flrBtns;
@@ -85,7 +84,6 @@ li button {
     border-radius: 0.5em;
     margin-bottom: 0.5em;
     background-color: rgb(220, 220, 220);
-    box-shadow: 3px 3px 10px rgb(219, 219, 219);
 }
 #map {
     grid-area: img;
@@ -209,8 +207,7 @@ li button {
 .activity {
     border: 2px solid #da1b5b;
     padding: 2em 1em 0 1em;
-    margin-top: 1em;
-    margin-left: 1em;
+    margin: 1em 1em 0 1em;
     background-color: white;
 }
 .activity:last-of-type {
