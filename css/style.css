@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+}
+main {
+    display: grid;
+    grid-template-columns: 10% 40% 400px max-content;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+        "infoBtns img roomInfo roomDesc"    
+        "flrBtns img roomInfo roomDesc"   
+    ;
+}
+#roomDesc {
+    margin-right: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-area: roomDesc;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    font-size: medium;
+}
+#roomDesc h3 {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+#firstDesc ul:first-of-type, #secondDesc ul:first-of-type {
+    width: 10em;
+    float: left;
+    margin-top: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#firstDesc ul:nth-child(2), #secondDesc ul:nth-child(2) {
+    width: 12em;
+    float: right;
+    margin-top: 0;
+}
+#firstDesc {
+    border: 3px solid #37B44A;
+}
+#secondDesc {
+    border: 3px solid #67ACDE;
+}
+#roomDesc li {
+    list-style: none;
+}
+i {
+    color: grey;
+}
+#roomDesc li:hover, button:hover, .closeBtns:hover {
+    cursor: pointer;
+}
+#infoBtns {
+    grid-area: infoBtns;
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0 0 1em;
+}
+#infoBtns button {
+    margin: 1em 0;
+    width: 100%;
+    padding: 2em 1em;
+    border: 1px solid;
+    border-radius: 0.5em;
+    font-size: medium;
+}
+#flrBtns {
+    grid-area: flrBtns;
+    font-size: medium;
+    padding-left: 0;
+    margin-left: 1em;
+}
+#flrBtns li {
+    list-style: none;
+}
+li button {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em;
+}
+#map {
+    grid-area: img;
+    width: 100%;
+    margin: 2em 0 0 1em;
+}
+#roomInfo {
+    grid-area: roomInfo;
+}
+#roomPins button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px;
+}
+#pin1   { left: 685px; top: 240px; }
+#pin2   { left: 685px; top: 325px; }
+#pin3   { left: 720px; top: 450px; }
+#pin4   { left: 625px; top: 610px; }
+#pin5   { left: 465px; top: 710px; }
+#pin6   { left: 382px; top: 840px; }
+#pin7a  { left: 292px; top: 880px; }
+#pin7b  { left: 472px; top: 880px; }
+#pin7c  { left: 382px; top: 940px; }
+#pin8   { left: 290px; top: 645px; }
+#pin9   { left: 420px; top: 578px; }
+#pin10  { left: 420px; top: 490px; }
+#pin11  { left: 268px; top: 585px; }
+#pin12a { left: 263px; top: 850px; }
+#pin12b { left: 467px; top: 850px; }
+#pin12c { left: 365px; top: 930px; }
+#pin13  { left: 450px; top: 750px; }
+#pin14  { left: 565px; top: 700px; }
+#pin15  { left: 698px; top: 845px; }
+#pin16  { left: 660px; top: 621px; }
+#pin17  { left: 745px; top: 395px; }
+#pin18a { left: 720px; top: 195px; }
+#pin18b { left: 675px; top: 320px; }
+.active {
+    background-color: #da1b5b;
+    color: white;
+    border: none;
+}
+.blueLinks {
+    display: none;
+}
+#card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8, #card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16, #card17, #card18 {
+    display: none;
+}
+.roomCards {
+    box-shadow: 4px 4px 4px lightgrey;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+    border: 1px solid lightgrey;
+    padding: 1em;
+    border-radius: 1em;
+}
+.roomCards img {
+    width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5em;
+}
+.roomCards h2 {
+    text-align: center;
+    width: 350px;
+}
+.roomCards p {
+    width: 350px;
+    margin: 0;
+}
+.roomCards p:not(.closeBtns) {
+    text-align: justify;
+}
+.closeBtns {
+    color: grey;
+    font-size: x-large;
+    text-align: right;
+}
+#popup {
+    padding:  1em;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 0.5em;
+    top: 10%;
+    left: 25%;
+    position: absolute;
+    z-index: 100;
+    width: 50%;
+    display: none;
+}
+#activityBox {
+    height: 70vh;
+    overflow: auto;
+    background-color: transparent;
+    width: fit-content;
+    border: 1px solid lightgrey;
+}
+#popupClose {
+    margin: 0;
+    text-align: right;
+    font-size: x-large;
+}
+#popupClose:hover, #overlay:hover {
+    cursor: pointer;
+}
+#popup h1 {
+    margin-top: 0;
+    text-align: center;
+}
+.activity {
+    border: 2px solid #da1b5b;
+    padding: 2em 1em 0 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+    background-color: white;
+}
+.activity:last-of-type {
+    margin-bottom: 1em;
+}
+.activity .date {
+    width: 40px;
+    height: 40px;
+    padding: 0.5em;
+    background-color: #da1b5b;
+    text-align: center;
+    color: white;
+}
+.activity p, .activity h2, .activity ul {
+    width: fit-content;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#direction {
+    grid-area: direction;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+
+}
+#direction p {
+    font-size: x-large;
+}
