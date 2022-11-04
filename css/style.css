@@ -246,3 +246,7 @@ li button {
 #direction p {
     font-size: x-large;
 }
+h4 {
+    text-align: center;
+    padding: 0;
+}
